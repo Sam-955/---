@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <!-- <div class="container">
+    App{{$store.state.user.profile.account}}
+    <button @click="$store.commit('user/setUser',{account:'500$'})">设置用户信息</button>
+    <br>
+    <button @click="fn">测试ruquest请求</button>
+  </div> -->
+  <!-- // 根组件完全替换 -->
+  <RouterView/>
+  <!-- <Layout/> -->
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+// import {useStore} from 'vuex'
+// import {request} from '@/utils/request'
+// import {Layout} from "@/views/Layout"
+export default {
+  name:"App",
+  // components:{Layout},
+  setup(){
+  //  const fn=function(){
+  //    console.log('准备发送路由请求')
+  //    request('/member/profile','get',{a:10})
+  //  }
+  //  return{
+  //    fn
+  //  }
+  },
 }
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style scoped>
 </style>
