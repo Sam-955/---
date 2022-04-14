@@ -6,18 +6,19 @@
     <button @click="fn">测试ruquest请求</button>
   </div> -->
   <!-- // 根组件完全替换 -->
-  <RouterView/>
-  <!-- <Layout/> -->
+  <!-- <RouterView/> -->
+  <xtxLayout/>
 </template>
 
 <script>
 // import {useStore} from 'vuex'
 // import {request} from '@/utils/request'
-// import {Layout} from "@/views/Layout"
+import xtxLayout from "./views/Layout"
+// import Layout from './views/member/layout.vue'
 export default {
-  name:"App",
-  // components:{Layout},
-  setup(){
+  name: 'App',
+  components:{xtxLayout},
+  setup () {
   //  const fn=function(){
   //    console.log('准备发送路由请求')
   //    request('/member/profile','get',{a:10})
@@ -25,7 +26,7 @@ export default {
   //  return{
   //    fn
   //  }
-  },
+  }
 }
 </script>
 

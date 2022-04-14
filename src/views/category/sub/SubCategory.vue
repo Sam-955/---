@@ -1,16 +1,14 @@
 <template>
   <div class="container">
-      HomePage
+     SubCategory
   </div>
 </template>
 
 <script >
-export default {
-  name: 'HomePage'
+export default{
+    name: 'SubCategory'
 }
-
 </script>
 
-<style  scoped>
-
+<style lang="less" scoped>
 </style>
